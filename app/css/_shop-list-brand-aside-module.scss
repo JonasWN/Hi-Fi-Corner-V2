@@ -1,0 +1,59 @@
+.product__brands {
+    display: none;
+}
+
+.brandList__item {
+    color: var(--main-bg-color);
+    font-size: 0.8em;
+    margin: 3%;
+    font-weight: 700;
+}
+
+.brandList__item:hover {
+    cursor: pointer;
+}
+
+.brands__h3 {
+    color: var(--main-gold-color);
+    font-size: 0.8em;
+}
+
+.brands__h5 {
+    color: var(--main-gold-color);
+    font-size: 0.8em;
+}
+
+.brands__h5:hover {
+    cursor: pointer;
+}
+
+.dropDown-item {
+    margin: 10px 5px;
+    display: none;
+}
+
+.dropDown-item-toggle {
+    display: block;
+}
+
+.catagorylist__text,
+.priceList__priceRange,
+.manufacturer__name {
+    color: var(--main-gold-color);
+}
+
+.catagory-current {
+    font-weight: 700;
+    color: var(--main-bg-color);
+}
+
+.brandList__text {
+    color: var(--main-bg-color);
+}
+
+@media screen and (min-width: 768px) {
+    .product__brands {
+        display: block;
+    }
+
+}

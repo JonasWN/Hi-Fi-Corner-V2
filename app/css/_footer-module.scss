@@ -1,0 +1,72 @@
+.footer {
+    background: var(--main-gold-color);
+}
+
+.info-left {
+    text-align: center;
+}
+
+.info-left__text {
+    color: var(--main-bg-color);
+    text-align: start;
+}
+
+.payment-list {
+    text-align: center;
+}
+
+.footer-media-list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-media-list__item {
+    width: 5%;
+    padding: 2px;
+}
+
+/* ---Desktop--- */
+
+@media screen and (min-width: 1080px) {
+    .footer-media-list__item {
+        width: inherit;
+        align-self: center;
+    }
+
+    .info-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .info-left {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-left: 5%;
+    }
+
+    .return-refunds,
+    .privacy-policy {
+        font-size: 14px;
+        margin-left: 5%;
+    }
+
+    .footer-media-list {
+        margin-right: 5%;
+    }
+
+    .info-right-payment-list {
+        width: 50%;
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        height: 10vh;
+    }
+
+    .info-left__text {
+        font-size: 10px;
+        font-weight: 700;
+    }
+}

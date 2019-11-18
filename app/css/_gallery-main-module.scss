@@ -1,0 +1,50 @@
+.gallery-main__imagecontainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.gallery-main {
+    background: var(--main-text-color);
+    position: relative;
+}
+
+#left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    color: var(--main-gold-color);
+    font-size: 3em;
+}
+
+#right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    color: var(--main-gold-color);
+    font-size: 3em;
+}
+
+#right-arrow:hover,
+#left-arrow:hover {
+    cursor: pointer;
+}
+
+.gallery-main__text {
+    text-align: center;
+    padding: 5% 0;
+    color: var(--main-gold-color);
+}
+
+.gallery-main__img {
+    display: none;
+    height: 630px;
+    object-fit: contain;
+    transition: all .5s ease-in-out;
+    opacity: 0.4;
+}
+
+.active-image {
+    display: block;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}

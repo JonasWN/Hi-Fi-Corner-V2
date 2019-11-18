@@ -1,0 +1,86 @@
+@import "footer-module";
+@import "navigation-module";
+@import "varibles";
+@import "standard";
+@import "product-template-main";
+
+.singleProductMain {
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1.5%;
+}
+
+.aside-title {
+    font-size: 0.8em;
+    color: var(--main-bg-color);
+    font-weight: 300;
+}
+
+.gold {
+    color: var(--main-gold-color);
+}
+
+.hero {
+    background-image: none;
+}
+
+.body {
+    background: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+/* .wrapper {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header"
+        "title"
+        "main"
+} */
+
+.hero {
+    grid-area: header;
+}
+
+.title {
+    grid-area: title;
+}
+
+.gallery-main {
+    grid-area: main;
+}
+
+.three-col-info-section {
+    grid-area: media;
+}
+
+.nav-search {
+    padding: 2%;
+    width: 100%;
+}
+
+.relative {
+    position: relative;
+    width: 400px;
+}
+
+#search-button {
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    color: #333;
+}
+
+.small-logo {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    width: 2.5%;
+}
+
+@media screen and (min-width: 1280px) {
+    .singleProductMain {
+        width: 80%;
+    }
+}

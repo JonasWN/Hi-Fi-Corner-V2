@@ -1,0 +1,45 @@
+@import "footer-module";
+@import "navigation-module";
+@import "varibles";
+@import "standard";
+@import "shop-thumb-grid-module";
+
+.hero {
+    background-image: none;
+}
+
+.body {
+    background: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "header"
+        "title"
+        "main"
+        "media"
+        "footer";
+}
+
+.hero {
+    grid-area: header;
+}
+
+.title {
+    grid-area: title;
+}
+
+.gallery-main {
+    grid-area: main;
+}
+
+.three-col-info-section {
+    grid-area: media;
+}
+
+
+
+@media screen and (min-width: 1280px) {}

@@ -1,0 +1,143 @@
+.product-list-main {
+    height: auto;
+    background: #fff;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 15px;
+    position: relative;
+    padding: 5% 0;
+}
+
+
+
+.productNavigation {
+    background: #ddd;
+    height: 70px;
+    margin: 3% 0;
+}
+
+.productNavigation__h3 {
+    margin-left: 45%;
+    font-size: 0.8em;
+    color: var(--main-bg-color);
+    font-weight: 300;
+    align-self: center;
+}
+
+.productNavigation__h4_down {
+    font-size: 0.7em;
+    color: var(--main-bg-color);
+    font-weight: 700;
+
+}
+
+.mainh2 {
+    color: var(--main-bg-color);
+    font-size: 2em;
+}
+
+.productNavigation__h4 {
+    font-size: 0.7em;
+    color: var(--main-bg-color);
+    font-weight: 300;
+    align-self: center;
+    width: 8%;
+}
+
+.iconsContainer {
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.navContainer {
+    display: flex;
+    height: 80%;
+    padding: 2% 1%;
+    overflow-y: hidden;
+}
+
+#grid-icon {
+    color: var(--main-gold-color);
+    margin-top: 3%;
+}
+
+#column-icon {
+    margin-top: 3%;
+}
+
+#column-icon:hover,
+#grid-icon:hover {
+    cursor: pointer;
+}
+
+
+
+/* products */
+
+
+.productslist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+    grid-template-rows: auto;
+    grid-gap: 70px 20px;
+    justify-content: center;
+}
+
+.productName {
+    color: var(--main-bg-color);
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.productPriceTag {
+    color: var(--main-bg-color);
+    margin: 10% 0;
+    text-align: center;
+    color: var(--main-gold-color);
+}
+
+.productslist__item img {
+    height: 130px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+}
+
+.productslist__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addCartButton {
+    width: 60%;
+    height: 40px;
+    border: none;
+    background: var(--main-gold-color);
+    color: #fff;
+    justify-self: center;
+}
+
+.addCartButton:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 960px) {
+    .product-list-main {
+        padding: 5% 2%;
+        width: 1540px;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    .productslist {
+        justify-content: inherit;
+    }
+}
