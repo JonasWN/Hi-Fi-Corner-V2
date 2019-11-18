@@ -47,13 +47,13 @@ const scss = done => {
 
 const javascript = done => {
   gulp
-    .src(".app/javascript/**/*.js")
+    .src("app/js/**/*.js")
     .pipe(
       babel({
         presets: ["@babel/env"]
       })
     )
-    .pipe(gulp.dest("/dist/assets/javascript"))
+    .pipe(gulp.dest("dist/assets/js"))
     .pipe(connect.reload());
   done();
 };
@@ -107,7 +107,7 @@ const watchScss = () => {
 
 const watchJavascript = () => {
   gulp.watch(
-    "./app/javascript/**/*.js", {
+    "./app/js/**/*.js", {
       ignoreInitial: false
     },
     javascript
