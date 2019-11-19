@@ -16,23 +16,22 @@
         <article class="aside__catagory">
             <ul class="catagorylist">
                 <li class="catagorylist__item">
-                    <a href="shop-list.html?catagory=forstaerkere" class="catagorylist__text"
-                        id="dropDown">Amplifiers</a>
-                    <a href="shop-list.html?catagory=forstaerkere&subCatagory=forforstaerkere"
+                    <a href="/shop-list?category=Amplifiers" class="catagorylist__text" id="dropDown">Amplifiers</a>
+                    <a href="/shop-list?category=Amplifiers&subCatagory=Tube Amplifiers"
                         class="catagorylist__text dropDown-item">Intergrated implifiers</a>
-                    <a href="shop-list.html?catagory=forstaerkere&subCatagory=intforstaerkere"
+                    <a href="/shop-list?category=Amplifiers&subCatagory=Power Amplifiers"
                         class="catagorylist__text dropDown-item">Power Amplifiers</a>
-                    <a href="shop-list.html?catagory=forstaerkere&subCatagory=roerforstaerkere"
+                    <a href="/shop-list?category=Amplifiers&subCatagory=Preamps"
                         class="catagorylist__text dropDown-item">Preamplifiers Amplifiers</a>
                 </li>
                 <li class="catagorylist__item">
-                    <a href="shop-list.html?catagory=hojtalere" class="catagorylist__text">Speakers</a>
+                    <a href="/shop-list?category=Speakers" class="catagorylist__text">Speakers</a>
                 </li>
                 <li class="catagorylist__item">
-                    <a href="shop-list.html?catagory=pladespillere" class="catagorylist__text">Turntables</a>
+                    <a href="/shop-list?catagory=LP Players" class="catagorylist__text">Turntables</a>
                 </li>
                 <li class="catagorylist__item">
-                    <a href="shop-list.html?catagory=cdPlayer" class="catagorylist__text">CD Players</a>
+                    <a href="/shop-list?catagory=CD Players" class="catagorylist__text">CD Players</a>
                 </li>
                 <li class="catagorylist__item">
                     <a class="catagorylist__text">Streamers</a>
@@ -47,7 +46,7 @@
                     <a class="catagorylist__text">Headphones</a>
                 </li>
                 <li class="catagorylist__item">
-                    <a href="shop-list.html?catagory=dvdafspillere" class="catagorylist__text">Home Cinema</a>
+                    <a href="/shop-list?catagory=DVD Players" class="catagorylist__text">Home Cinema</a>
                 </li>
                 <li class="catagorylist__item">
                     <a class="catagorylist__text">Ceiling Speakers</a>
@@ -287,8 +286,27 @@
     </aside>
 </main>
 
+<template id="product__template">
+    <li class="productslist__item">
+        <a href="product-template.html">
+            <img src="https://www.mayorsfundforlondon.org.uk/wp-content/uploads/2016/06/img-placeholder-square-300x300.jpg"
+                alt="image of product">
+        </a>
+        <h2 class="productName">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, explicabo!
+        </h2>
+
+        <p class="productPriceTag">
+            400£
+        </p>
+        <button class="addCartButton">
+            ADD TO CART
+        </button>
+    </li>
+</template>
 
 <% include ../partials/footer %>
 <!--WRAPPER-ENDS-->
-
+<script src="/assets/js/get-all-products.js" defer></script>
+<script src="/assets/js/get-product-by-category.js" defer></script>
 <% include ../partials/after-footer %>
