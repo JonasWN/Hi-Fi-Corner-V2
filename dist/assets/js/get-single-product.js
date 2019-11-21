@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var productSku = url.get("sku");
   var namePrice = document.querySelector(".name-price");
   var asidetitle = document.querySelector(".aside-title");
+  var name = document.querySelector(".right-article-section__h1");
   fetch("https://hifi-corner.herokuapp.com/api/v1/products/".concat(productSku), {
     "method": "GET"
   }).then(function (answer) {
@@ -16,5 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     catagoryList.innerHTML = "\n            <img src=".concat(response.images, " alt=\"image of product\">\n            ");
     namePrice.innerHTML = " <p>See other ".concat(response.description, " products</p>\n            <p> ").concat(response.price, "</p>");
     asidetitle.innerHTML = " <span class=\"gold\">Home</span> /<span class=\"gold\"> ".concat(response.category, " Amplifiers</span> /").concat(response.model);
+    name.innerHTML = response.model;
   });
 });

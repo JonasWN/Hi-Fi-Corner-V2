@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var subCategory = params.get("subCatagory");
   var productTemplate = document.querySelector("#product__template");
   var productList = document.querySelector(".productslist");
+  var productCounter = 0;
+  var shownItems = document.querySelector("#antal");
 
   if (subCategory) {
     fetch("https://hifi-corner.herokuapp.com/api/v1/products?category=".concat(subCategory), {
@@ -20,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
         productClone.querySelector(".productPriceTag").innerText = product.price + " $ ";
         productClone.querySelector("a").href = "/product-template?sku=".concat(product.sku);
         productList.appendChild(productClone);
+        productCounter++;
+        shownItems.innerText = productCounter;
       });
     });
   } else {
@@ -35,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
         productClone.querySelector(".productPriceTag").innerText = product.price + " $ ";
         productClone.querySelector("a").href = "/product-template?sku=".concat(product.sku);
         productList.appendChild(productClone);
+        productCounter++;
+        shownItems.innerText = productCounter;
       });
     });
   }

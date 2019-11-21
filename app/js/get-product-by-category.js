@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const productTemplate = document.querySelector("#product__template")
     const productList = document.querySelector(".productslist");
 
+    let productCounter = 0
+    const shownItems = document.querySelector("#antal")
+
     if (subCategory) {
         fetch(`https://hifi-corner.herokuapp.com/api/v1/products?category=${subCategory}`, {
                 "method": "GET"
@@ -18,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     productClone.querySelector(".productPriceTag").innerText = product.price + " $ "
                     productClone.querySelector("a").href = `/product-template?sku=${product.sku}`
                     productList.appendChild(productClone);
+                    productCounter++
+                    shownItems.innerText = productCounter
                 });
             })
 
@@ -35,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     productClone.querySelector(".productPriceTag").innerText = product.price + " $ "
                     productClone.querySelector("a").href = `/product-template?sku=${product.sku}`
                     productList.appendChild(productClone);
+                    productCounter++
+                    shownItems.innerText = productCounter
                 });
             })
     }

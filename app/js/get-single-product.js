@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const catagoryList = document.querySelector(".product-image-container");
     let url = new URLSearchParams(document.location.search);
     const productSku = (url.get("sku"));
+
     const namePrice = document.querySelector(".name-price");
     const asidetitle = document.querySelector(".aside-title");
+    const name = document.querySelector(".right-article-section__h1");
 
     fetch(`https://hifi-corner.herokuapp.com/api/v1/products/${productSku}`, {
             "method": "GET"
@@ -20,6 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <p> ${response.price}</p>`
 
             asidetitle.innerHTML = ` <span class="gold">Home</span> /<span class="gold"> ${response.category} Amplifiers</span> /${response.model}`
-
+            name.innerHTML = response.model
         })
 });
