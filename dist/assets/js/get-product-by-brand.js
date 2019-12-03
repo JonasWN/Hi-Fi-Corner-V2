@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var productList = document.querySelector(".productslist");
   var productCounter = 0;
   var shownItems = document.querySelector("#antal");
-  fetch("https://hifi-corner.herokuapp.com/api/v1/products?make=".concat(brandUrl), {
+  fetch("https://hifi-corner.herokuapp.com/api/v1/products?make=".concat(brandUrl, "&minPrice=100&maxPrice=8000"), {
     "method": "GET"
   }).then(function (answer) {
     return answer.json();
@@ -22,5 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
       productCounter++;
       shownItems.innerText = productCounter;
     });
+  })["catch"](function (error) {
+    console.log("Something Went Wrong...");
+    console.error(error);
   });
 });

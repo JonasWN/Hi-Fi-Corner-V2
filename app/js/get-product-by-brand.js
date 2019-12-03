@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const shownItems = document.querySelector("#antal")
 
 
-    fetch(`https://hifi-corner.herokuapp.com/api/v1/products?make=${brandUrl}`, {
+    fetch(`https://hifi-corner.herokuapp.com/api/v1/products?make=${brandUrl}&minPrice=100&maxPrice=8000`, {
             "method": "GET"
         })
         .then(answer => answer.json())
@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 productCounter++
                 shownItems.innerText = productCounter
             });
+        })
+        .catch(error => {
+            console.log("Something Went Wrong...")
+            console.error(error)
         });
 
 });

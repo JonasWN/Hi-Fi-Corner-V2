@@ -23,5 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             asidetitle.innerHTML = ` <span class="gold">Home</span> /<span class="gold"> ${response.category} Amplifiers</span> /${response.model}`
             name.innerHTML = response.model
+        }).catch(error => {
+            console.log("Something Went Wrong...")
+            console.error(error)
         })
 });

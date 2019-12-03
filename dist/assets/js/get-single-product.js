@@ -18,5 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
     namePrice.innerHTML = " <p>See other ".concat(response.description, " products</p>\n            <p> ").concat(response.price, "</p>");
     asidetitle.innerHTML = " <span class=\"gold\">Home</span> /<span class=\"gold\"> ".concat(response.category, " Amplifiers</span> /").concat(response.model);
     name.innerHTML = response.model;
+  })["catch"](function (error) {
+    console.log("Something Went Wrong...");
+    console.error(error);
   });
 });

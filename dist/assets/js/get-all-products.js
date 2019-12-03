@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // };
   // getAllProducts();
 
-  if (tag === "all") fetch("https://hifi-corner.herokuapp.com/api/v1/products", {
+  if (tag === "all") fetch("https://hifi-corner.herokuapp.com/api/v1/products?minPrice=100&maxPrice=8000", {
     "method": "GET"
   }).then(function (answer) {
     return answer.json();
@@ -37,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
       productCounter++;
       shownItems.innerText = productCounter;
     });
+  })["catch"](function (error) {
+    console.log("Something Went Wrong...");
+    console.error(error);
   }); // dropdown shop list for subcatagorys
 
   if (catagoryURL === "Amplifiers") {

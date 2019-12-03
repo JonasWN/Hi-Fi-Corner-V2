@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var shownItems = document.querySelector("#antal");
 
   if (subCategory) {
-    fetch("https://hifi-corner.herokuapp.com/api/v1/products?category=".concat(subCategory), {
+    fetch("https://hifi-corner.herokuapp.com/api/v1/products?category=".concat(subCategory, "&minPrice=100&maxPrice=8000"), {
       "method": "GET"
     }).then(function (answer) {
       return answer.json();
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   } else {
-    fetch("https://hifi-corner.herokuapp.com/api/v1/products?category=".concat(catagoryURL), {
+    fetch("https://hifi-corner.herokuapp.com/api/v1/products?category=".concat(catagoryURL, "&minPrice=1000&maxPrice=4000"), {
       "method": "GET"
     }).then(function (answer) {
       return answer.json();

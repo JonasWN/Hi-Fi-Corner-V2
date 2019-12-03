@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const shownItems = document.querySelector("#antal")
 
     if (subCategory) {
-        fetch(`https://hifi-corner.herokuapp.com/api/v1/products?category=${subCategory}`, {
+        fetch(`https://hifi-corner.herokuapp.com/api/v1/products?category=${subCategory}&minPrice=100&maxPrice=8000`, {
                 "method": "GET"
             })
             .then(answer => answer.json())
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } else {
 
-        fetch(`https://hifi-corner.herokuapp.com/api/v1/products?category=${catagoryURL}`, {
+        fetch(`https://hifi-corner.herokuapp.com/api/v1/products?category=${catagoryURL}&minPrice=1000&maxPrice=4000`, {
                 "method": "GET"
             })
             .then(answer => answer.json())
